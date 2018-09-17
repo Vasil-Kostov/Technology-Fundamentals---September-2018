@@ -1,0 +1,8 @@
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\11. Multiplication Table 2.0\bin\Debug\netcoreapp1.1\11. Multiplication Table 2.0.deps.json
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\11. Multiplication Table 2.0\bin\Debug\netcoreapp1.1\11. Multiplication Table 2.0.runtimeconfig.json
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\11. Multiplication Table 2.0\bin\Debug\netcoreapp1.1\11. Multiplication Table 2.0.runtimeconfig.dev.json
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\11. Multiplication Table 2.0\bin\Debug\netcoreapp1.1\11. Multiplication Table 2.0.dll
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\11. Multiplication Table 2.0\bin\Debug\netcoreapp1.1\11. Multiplication Table 2.0.pdb
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\11. Multiplication Table 2.0\obj\Debug\netcoreapp1.1\11. Multiplication Table 2.0.AssemblyInfo.cs
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\11. Multiplication Table 2.0\obj\Debug\netcoreapp1.1\11. Multiplication Table 2.0.dll
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\11. Multiplication Table 2.0\obj\Debug\netcoreapp1.1\11. Multiplication Table 2.0.pdb

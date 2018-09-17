@@ -1,0 +1,9 @@
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\05. Month Printer\bin\Debug\netcoreapp1.1\05. Month Printer.deps.json
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\05. Month Printer\bin\Debug\netcoreapp1.1\05. Month Printer.runtimeconfig.json
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\05. Month Printer\bin\Debug\netcoreapp1.1\05. Month Printer.runtimeconfig.dev.json
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\05. Month Printer\bin\Debug\netcoreapp1.1\05. Month Printer.dll
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\05. Month Printer\bin\Debug\netcoreapp1.1\05. Month Printer.pdb
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\05. Month Printer\obj\Debug\netcoreapp1.1\05. Month Printer.csprojResolveAssemblyReference.cache
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\05. Month Printer\obj\Debug\netcoreapp1.1\05. Month Printer.AssemblyInfo.cs
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\05. Month Printer\obj\Debug\netcoreapp1.1\05. Month Printer.dll
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\05. Month Printer\obj\Debug\netcoreapp1.1\05. Month Printer.pdb

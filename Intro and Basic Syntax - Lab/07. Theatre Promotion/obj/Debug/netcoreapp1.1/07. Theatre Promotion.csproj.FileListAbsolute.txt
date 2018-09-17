@@ -1,0 +1,9 @@
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\07. Theatre Promotion\bin\Debug\netcoreapp1.1\07. Theatre Promotion.deps.json
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\07. Theatre Promotion\bin\Debug\netcoreapp1.1\07. Theatre Promotion.runtimeconfig.json
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\07. Theatre Promotion\bin\Debug\netcoreapp1.1\07. Theatre Promotion.runtimeconfig.dev.json
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\07. Theatre Promotion\bin\Debug\netcoreapp1.1\07. Theatre Promotion.dll
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\07. Theatre Promotion\bin\Debug\netcoreapp1.1\07. Theatre Promotion.pdb
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\07. Theatre Promotion\obj\Debug\netcoreapp1.1\07. Theatre Promotion.csprojResolveAssemblyReference.cache
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\07. Theatre Promotion\obj\Debug\netcoreapp1.1\07. Theatre Promotion.AssemblyInfo.cs
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\07. Theatre Promotion\obj\Debug\netcoreapp1.1\07. Theatre Promotion.dll
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\07. Theatre Promotion\obj\Debug\netcoreapp1.1\07. Theatre Promotion.pdb

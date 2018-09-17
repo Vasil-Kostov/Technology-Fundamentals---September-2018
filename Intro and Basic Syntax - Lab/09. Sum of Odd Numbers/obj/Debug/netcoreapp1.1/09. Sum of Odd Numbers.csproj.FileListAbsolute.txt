@@ -1,0 +1,8 @@
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\09. Sum of Odd Numbers\bin\Debug\netcoreapp1.1\09. Sum of Odd Numbers.deps.json
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\09. Sum of Odd Numbers\bin\Debug\netcoreapp1.1\09. Sum of Odd Numbers.runtimeconfig.json
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\09. Sum of Odd Numbers\bin\Debug\netcoreapp1.1\09. Sum of Odd Numbers.runtimeconfig.dev.json
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\09. Sum of Odd Numbers\bin\Debug\netcoreapp1.1\09. Sum of Odd Numbers.dll
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\09. Sum of Odd Numbers\bin\Debug\netcoreapp1.1\09. Sum of Odd Numbers.pdb
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\09. Sum of Odd Numbers\obj\Debug\netcoreapp1.1\09. Sum of Odd Numbers.AssemblyInfo.cs
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\09. Sum of Odd Numbers\obj\Debug\netcoreapp1.1\09. Sum of Odd Numbers.dll
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\09. Sum of Odd Numbers\obj\Debug\netcoreapp1.1\09. Sum of Odd Numbers.pdb

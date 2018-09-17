@@ -1,0 +1,9 @@
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\03. Passed or Failed\bin\Debug\netcoreapp1.1\03. Passed or Failed.deps.json
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\03. Passed or Failed\bin\Debug\netcoreapp1.1\03. Passed or Failed.runtimeconfig.json
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\03. Passed or Failed\bin\Debug\netcoreapp1.1\03. Passed or Failed.runtimeconfig.dev.json
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\03. Passed or Failed\bin\Debug\netcoreapp1.1\03. Passed or Failed.dll
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\03. Passed or Failed\bin\Debug\netcoreapp1.1\03. Passed or Failed.pdb
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\03. Passed or Failed\obj\Debug\netcoreapp1.1\03. Passed or Failed.csprojResolveAssemblyReference.cache
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\03. Passed or Failed\obj\Debug\netcoreapp1.1\03. Passed or Failed.AssemblyInfo.cs
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\03. Passed or Failed\obj\Debug\netcoreapp1.1\03. Passed or Failed.dll
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\03. Passed or Failed\obj\Debug\netcoreapp1.1\03. Passed or Failed.pdb

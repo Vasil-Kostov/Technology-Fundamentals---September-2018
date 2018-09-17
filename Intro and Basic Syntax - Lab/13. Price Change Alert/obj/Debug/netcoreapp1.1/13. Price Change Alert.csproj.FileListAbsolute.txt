@@ -1,0 +1,9 @@
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\13. Price Change Alert\bin\Debug\netcoreapp1.1\13. Price Change Alert.deps.json
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\13. Price Change Alert\bin\Debug\netcoreapp1.1\13. Price Change Alert.runtimeconfig.json
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\13. Price Change Alert\bin\Debug\netcoreapp1.1\13. Price Change Alert.runtimeconfig.dev.json
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\13. Price Change Alert\bin\Debug\netcoreapp1.1\13. Price Change Alert.dll
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\13. Price Change Alert\bin\Debug\netcoreapp1.1\13. Price Change Alert.pdb
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\13. Price Change Alert\obj\Debug\netcoreapp1.1\13. Price Change Alert.AssemblyInfo.cs
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\13. Price Change Alert\obj\Debug\netcoreapp1.1\13. Price Change Alert.dll
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\13. Price Change Alert\obj\Debug\netcoreapp1.1\13. Price Change Alert.pdb
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\13. Price Change Alert\obj\Debug\netcoreapp1.1\13. Price Change Alert.csprojResolveAssemblyReference.cache

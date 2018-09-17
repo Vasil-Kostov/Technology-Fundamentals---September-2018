@@ -1,0 +1,8 @@
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\12. Even Number\bin\Debug\netcoreapp1.1\12. Even Number.deps.json
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\12. Even Number\bin\Debug\netcoreapp1.1\12. Even Number.runtimeconfig.json
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\12. Even Number\bin\Debug\netcoreapp1.1\12. Even Number.runtimeconfig.dev.json
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\12. Even Number\bin\Debug\netcoreapp1.1\12. Even Number.dll
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\12. Even Number\bin\Debug\netcoreapp1.1\12. Even Number.pdb
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\12. Even Number\obj\Debug\netcoreapp1.1\12. Even Number.AssemblyInfo.cs
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\12. Even Number\obj\Debug\netcoreapp1.1\12. Even Number.dll
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\12. Even Number\obj\Debug\netcoreapp1.1\12. Even Number.pdb

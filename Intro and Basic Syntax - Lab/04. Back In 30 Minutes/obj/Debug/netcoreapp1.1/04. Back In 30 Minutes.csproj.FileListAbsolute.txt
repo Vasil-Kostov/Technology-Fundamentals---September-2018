@@ -1,0 +1,8 @@
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\04. Back In 30 Minutes\bin\Debug\netcoreapp1.1\04. Back In 30 Minutes.deps.json
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\04. Back In 30 Minutes\bin\Debug\netcoreapp1.1\04. Back In 30 Minutes.runtimeconfig.json
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\04. Back In 30 Minutes\bin\Debug\netcoreapp1.1\04. Back In 30 Minutes.runtimeconfig.dev.json
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\04. Back In 30 Minutes\bin\Debug\netcoreapp1.1\04. Back In 30 Minutes.dll
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\04. Back In 30 Minutes\bin\Debug\netcoreapp1.1\04. Back In 30 Minutes.pdb
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\04. Back In 30 Minutes\obj\Debug\netcoreapp1.1\04. Back In 30 Minutes.AssemblyInfo.cs
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\04. Back In 30 Minutes\obj\Debug\netcoreapp1.1\04. Back In 30 Minutes.dll
+c:\users\vasil\documents\visual studio 2017\Projects\Intro and Basic Syntax - Lab\04. Back In 30 Minutes\obj\Debug\netcoreapp1.1\04. Back In 30 Minutes.pdb
