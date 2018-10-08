@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Data Type Finder", "01. Data Type Finder\01. Data Type Finder.csproj", "{2AF0F974-0116-40A4-B84E-2A0EF546A3C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. From Left to The Right", "02. From Left to The Right\02. From Left to The Right.csproj", "{4A26C322-A386-403E-BBB7-6313928B3E71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Exchange Integers", "03. Exchange Integers\03. Exchange Integers.csproj", "{B0E4CA03-ECCA-4ADA-9FA7-614779E827F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Floating Equality", "04. Floating Equality\04. Floating Equality.csproj", "{AB5589A5-387E-4EDB-A7D8-0F8C80778CFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Refactoring Prime Checker", "05. Refactoring Prime Checker\05. Refactoring Prime Checker.csproj", "{EC0211B5-5D59-4BBA-8C9E-A7664DBE8C3D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2AF0F974-0116-40A4-B84E-2A0EF546A3C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AF0F974-0116-40A4-B84E-2A0EF546A3C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AF0F974-0116-40A4-B84E-2A0EF546A3C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AF0F974-0116-40A4-B84E-2A0EF546A3C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A26C322-A386-403E-BBB7-6313928B3E71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A26C322-A386-403E-BBB7-6313928B3E71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A26C322-A386-403E-BBB7-6313928B3E71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A26C322-A386-403E-BBB7-6313928B3E71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0E4CA03-ECCA-4ADA-9FA7-614779E827F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0E4CA03-ECCA-4ADA-9FA7-614779E827F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0E4CA03-ECCA-4ADA-9FA7-614779E827F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0E4CA03-ECCA-4ADA-9FA7-614779E827F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB5589A5-387E-4EDB-A7D8-0F8C80778CFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB5589A5-387E-4EDB-A7D8-0F8C80778CFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB5589A5-387E-4EDB-A7D8-0F8C80778CFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB5589A5-387E-4EDB-A7D8-0F8C80778CFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC0211B5-5D59-4BBA-8C9E-A7664DBE8C3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC0211B5-5D59-4BBA-8C9E-A7664DBE8C3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC0211B5-5D59-4BBA-8C9E-A7664DBE8C3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC0211B5-5D59-4BBA-8C9E-A7664DBE8C3D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
