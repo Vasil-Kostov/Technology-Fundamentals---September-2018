@@ -24,7 +24,7 @@
                 sampleCounter++;
 
                 int[] currentSample = sampleStr
-                                      .Split(new char[] {'!'}, StringSplitOptions.RemoveEmptyEntries)
+                                      .Split("!".ToCharArray(), StringSplitOptions.RemoveEmptyEntries)
                                       .Select(int.Parse)
                                       .ToArray();
 
