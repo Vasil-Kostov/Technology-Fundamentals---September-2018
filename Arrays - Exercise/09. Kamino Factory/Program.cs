@@ -40,7 +40,7 @@
 
                     for (int j = i + 1; j < currentSample.Length; j++)
                     {
-                        if (currentSample[i] == 1 && currentSample[i] == currentSample[j])
+                        if (currentSample[i] == 1 && currentSample[j] == 1)
                         {
                             currentSequenceLength++;
                         }
