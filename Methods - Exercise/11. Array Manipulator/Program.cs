@@ -24,10 +24,10 @@
                         array = ExchageTheSubArrays(commandSequence[1], array);
                         break;
                     case "max":
-                        PrintIndexOfMax(array, commandSequence[1]);
+                        PrintIndexOfMaxEvenOrOdd(array, commandSequence[1]);
                         break;
                     case "min":
-                        PrintIndexOfMin(array, commandSequence[1]);
+                        PrintIndexOfMinEvenOrOdd(array, commandSequence[1]);
                         break;
                     case "first":
                         PrintFirsNEvensOrOdds(array, commandSequence[1], commandSequence[2]);
@@ -117,7 +117,7 @@
 
         }
 
-        private static void PrintIndexOfMin(int[] array, string evenOrOdd)
+        private static void PrintIndexOfMinEvenOrOdd(int[] array, string evenOrOdd)
         {
             int remainder = evenOrOdd == "even" ? 0 : 1;
 
@@ -159,7 +159,7 @@
             return lastIndex.ToString();
         }
 
-        private static void PrintIndexOfMax(int[] array, string evenOrOdd)
+        private static void PrintIndexOfMaxEvenOrOdd(int[] array, string evenOrOdd)
         {
             int remainder = evenOrOdd == "even" ? 0 : 1;
 
