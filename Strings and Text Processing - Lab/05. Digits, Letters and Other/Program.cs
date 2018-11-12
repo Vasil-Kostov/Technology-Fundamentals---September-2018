@@ -13,9 +13,9 @@
 
             string input = Console.ReadLine();
 
-            string digits = string.Join("", digitRegex.Matches(input));
-            string chars = string.Join("", charRegex.Matches(input));
-            string others = string.Join("", anyOtherRegex.Matches(input));
+            string digits = string.Join(string.Empty, digitRegex.Matches(input));
+            string chars = string.Join(string.Empty, charRegex.Matches(input));
+            string others = string.Join(string.Empty, anyOtherRegex.Matches(input));
 
             Console.WriteLine(digits);
             Console.WriteLine(chars);
