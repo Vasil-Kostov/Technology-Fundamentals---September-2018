@@ -16,10 +16,7 @@
 
             foreach (var word in banned)
             {
-                while (text.Contains(word))
-                {
-                    text = text.Replace(word, new string('*', word.Length));
-                }
+                text = text.Replace(word, new string('*', word.Length));
             }
 
             Console.WriteLine(text);
