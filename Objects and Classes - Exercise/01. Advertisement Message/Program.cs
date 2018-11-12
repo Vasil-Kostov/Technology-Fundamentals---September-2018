@@ -52,7 +52,7 @@
             advertise += $"{this.Phrases[random.Next(this.Phrases.Count)]} ";
             advertise += $"{this.Events[random.Next(this.Events.Count)]} ";
             advertise += $"{this.Authors[random.Next(this.Authors.Count)]} - "; 
-            advertise += $"{this.Cities[random.Next(this.Phrases.Count)]}";
+            advertise += $"{this.Cities[random.Next(this.Phrases.Count)]}.";
             
             return advertise;
         }
