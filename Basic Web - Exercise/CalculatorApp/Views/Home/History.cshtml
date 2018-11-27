@@ -1,0 +1,15 @@
+﻿@model List<CalculatorApp.Models.Calculator>
+
+@{
+    ViewData["Title"] = "History";
+}
+
+<h2>History</h2>
+
+@foreach (var calculation in Model)
+{
+   <div class="alert-success">
+       @calculation.LeftOperand @calculation.Operator @calculation.RightOperand = @calculation.Result
+   </div>
+}
+
