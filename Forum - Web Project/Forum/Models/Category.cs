@@ -7,31 +7,32 @@ using System.Threading.Tasks;
 
 namespace Forum.Models
 {
-    public class Comment
+    public class Category
     {
+        public Category()
+        {
+            Topics = new List<Topic>();
+        }
+
         public bool IsAuthor(string id)
         {
             return this.Author.UserName.Equals(id);
         }
 
         [Key]
-        public int CommentId { get; set; }
+        public int Id { get; set; }
 
         [Required]
-        public string Description { get; set; }
-
-        [Display(Name = "Created Date")]
-        public DateTime CreatedDate { get; set; }
-
-        [Display(Name = "Last Updated Date")]
-        public DateTime LastUpdatedDate { get; set; }
-
-        [ForeignKey("Topic")]
-        public int TopicId { get; set; }
-        public Topic Topic { get; set; }
+        [Display(Name = "Category Name")]
+        public string Name { get; set; }
 
         [ForeignKey("Author")]
         public string AuthorId { get; set; }
         public ApplicationUser Author { get; set; }
+
+        public List<Topic> Topics { get; set; }
+
+        [NotMapped]
+        public int NumberTopics => Topics.Count;
     }
 }

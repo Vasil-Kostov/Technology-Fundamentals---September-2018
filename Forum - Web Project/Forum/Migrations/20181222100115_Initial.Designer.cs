@@ -11,7 +11,7 @@ using System;
 namespace Forum.Migrations
 {
     [DbContext(typeof(ForumDbContext))]
-    [Migration("20181206100605_Initial")]
+    [Migration("20181222100115_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -75,12 +75,56 @@ namespace Forum.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("Forum.Models.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("AuthorId");
+
+                    b.Property<string>("Name")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AuthorId");
+
+                    b.ToTable("Categoties");
+                });
+
+            modelBuilder.Entity("Forum.Models.Comment", b =>
+                {
+                    b.Property<int>("CommentId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("AuthorId");
+
+                    b.Property<DateTime>("CreatedDate");
+
+                    b.Property<string>("Description")
+                        .IsRequired();
+
+                    b.Property<DateTime>("LastUpdatedDate");
+
+                    b.Property<int>("TopicId");
+
+                    b.HasKey("CommentId");
+
+                    b.HasIndex("AuthorId");
+
+                    b.HasIndex("TopicId");
+
+                    b.ToTable("Comments");
+                });
+
             modelBuilder.Entity("Forum.Models.Topic", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("AuthorId");
+
+                    b.Property<int>("CategoryId");
 
                     b.Property<DateTime>("CreateDate");
 
@@ -96,6 +140,8 @@ namespace Forum.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("AuthorId");
+
+                    b.HasIndex("CategoryId");
 
                     b.ToTable("Topics");
                 });
@@ -208,11 +254,35 @@ namespace Forum.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("Forum.Models.Category", b =>
+                {
+                    b.HasOne("Forum.Models.ApplicationUser", "Author")
+                        .WithMany()
+                        .HasForeignKey("AuthorId");
+                });
+
+            modelBuilder.Entity("Forum.Models.Comment", b =>
+                {
+                    b.HasOne("Forum.Models.ApplicationUser", "Author")
+                        .WithMany()
+                        .HasForeignKey("AuthorId");
+
+                    b.HasOne("Forum.Models.Topic", "Topic")
+                        .WithMany("Comments")
+                        .HasForeignKey("TopicId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("Forum.Models.Topic", b =>
                 {
                     b.HasOne("Forum.Models.ApplicationUser", "Author")
                         .WithMany()
                         .HasForeignKey("AuthorId");
+
+                    b.HasOne("Forum.Models.Category", "Category")
+                        .WithMany("Topics")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

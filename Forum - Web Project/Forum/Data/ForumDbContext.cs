@@ -14,12 +14,14 @@ namespace Forum.Data
 
         public DbSet<Comment> Comments { get; set; }
 
+        public DbSet<Category> Categoties { get; set; }
+
         public ForumDbContext(DbContextOptions<ForumDbContext> options)
             : base(options)
         {
         }
 
-        private const string ConnectionString = @"Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;";
+        private const string ConnectionString = @"Server=localhost\SQLEXPRESS;Database=ForumDatabase;Trusted_Connection=True;";
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

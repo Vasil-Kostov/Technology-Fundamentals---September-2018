@@ -74,6 +74,23 @@ namespace Forum.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("Forum.Models.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("AuthorId");
+
+                    b.Property<string>("Name")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AuthorId");
+
+                    b.ToTable("Categoties");
+                });
+
             modelBuilder.Entity("Forum.Models.Comment", b =>
                 {
                     b.Property<int>("CommentId")
@@ -106,6 +123,8 @@ namespace Forum.Migrations
 
                     b.Property<string>("AuthorId");
 
+                    b.Property<int>("CategoryId");
+
                     b.Property<DateTime>("CreateDate");
 
                     b.Property<string>("Description")
@@ -120,6 +139,8 @@ namespace Forum.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("AuthorId");
+
+                    b.HasIndex("CategoryId");
 
                     b.ToTable("Topics");
                 });
@@ -232,6 +253,13 @@ namespace Forum.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("Forum.Models.Category", b =>
+                {
+                    b.HasOne("Forum.Models.ApplicationUser", "Author")
+                        .WithMany()
+                        .HasForeignKey("AuthorId");
+                });
+
             modelBuilder.Entity("Forum.Models.Comment", b =>
                 {
                     b.HasOne("Forum.Models.ApplicationUser", "Author")
@@ -249,6 +277,11 @@ namespace Forum.Migrations
                     b.HasOne("Forum.Models.ApplicationUser", "Author")
                         .WithMany()
                         .HasForeignKey("AuthorId");
+
+                    b.HasOne("Forum.Models.Category", "Category")
+                        .WithMany("Topics")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

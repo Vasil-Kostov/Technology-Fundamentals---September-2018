@@ -40,8 +40,14 @@
                                         </span>
                                     </span>
                                     <span class="item-wrap">
-                                        <a href="/Topic/Details/@ViewContext.RouteData.Values["id"]/Comment/Edit/@comment.CommentId" class="btn btn-default">Edit</a>
-                                        <a href="/Topic/Details/@ViewContext.RouteData.Values["id"]/Comment/Delete/@comment.CommentId" class="btn btn-default">Delete</a>
+                                        @if (comment.IsAuthor(User.Identity.Name))
+                                        {
+                                            <a href="/Topic/Details/@ViewContext.RouteData.Values["id"]/Comment/Edit/@comment.CommentId" class="btn btn-default">Edit</a>
+                                        }
+                                        @if (comment.IsAuthor(User.Identity.Name) || comment.Topic.IsAuthor(User.Identity.Name))
+                                        {
+                                            <a href="/Topic/Details/@ViewContext.RouteData.Values["id"]/Comment/Delete/@comment.CommentId" class="btn btn-default">Delete</a>
+                                        }
                                     </span>
                                 </div>
                             </div>

@@ -156,12 +156,33 @@ namespace Forum.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Categoties",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    AuthorId = table.Column<string>(nullable: true),
+                    Name = table.Column<string>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Categoties", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Categoties_AspNetUsers_AuthorId",
+                        column: x => x.AuthorId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Topics",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     AuthorId = table.Column<string>(nullable: true),
+                    CategoryId = table.Column<int>(nullable: false),
                     CreateDate = table.Column<DateTime>(nullable: false),
                     Description = table.Column<string>(nullable: false),
                     LastUpdatedDate = table.Column<DateTime>(nullable: false),
@@ -176,6 +197,41 @@ namespace Forum.Migrations
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Topics_Categoties_CategoryId",
+                        column: x => x.CategoryId,
+                        principalTable: "Categoties",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Comments",
+                columns: table => new
+                {
+                    CommentId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    AuthorId = table.Column<string>(nullable: true),
+                    CreatedDate = table.Column<DateTime>(nullable: false),
+                    Description = table.Column<string>(nullable: false),
+                    LastUpdatedDate = table.Column<DateTime>(nullable: false),
+                    TopicId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Comments", x => x.CommentId);
+                    table.ForeignKey(
+                        name: "FK_Comments_AspNetUsers_AuthorId",
+                        column: x => x.AuthorId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Comments_Topics_TopicId",
+                        column: x => x.TopicId,
+                        principalTable: "Topics",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -218,9 +274,29 @@ namespace Forum.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Categoties_AuthorId",
+                table: "Categoties",
+                column: "AuthorId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Comments_AuthorId",
+                table: "Comments",
+                column: "AuthorId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Comments_TopicId",
+                table: "Comments",
+                column: "TopicId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Topics_AuthorId",
                 table: "Topics",
                 column: "AuthorId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Topics_CategoryId",
+                table: "Topics",
+                column: "CategoryId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -241,10 +317,16 @@ namespace Forum.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Topics");
+                name: "Comments");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
+
+            migrationBuilder.DropTable(
+                name: "Topics");
+
+            migrationBuilder.DropTable(
+                name: "Categoties");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");

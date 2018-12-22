@@ -1,11 +1,33 @@
 ﻿@model IEnumerable<Topic>
-
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Index";
+    List<Category> categories = (List<Category>)ViewData["Categories"];
 }
 
 <div class="container-fluid">
     <div class="row forum-container">
+        <aside class="col-md-3 col-sm-12 forum-sidebar">
+            <div class="category-wrapper">
+                <p>
+                    <a asp-controller="Category" asp-action="Create" class="btn btn-default">Create New Category</a>
+                </p>
+                <h3>Categories</h3>
+                <ul>
+                    <li>
+                        <a asp-controller="Home" asp-action="Index">All Topics</a>
+                    </li>
+                    @foreach (var category in categories)
+                    {
+                        <li>
+                            <a asp-controller="Category" asp-action="Details" asp-route-id="@category.Id" class="">@category.Name</a>
+                            <span>(@category.NumberTopics)</span>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </aside>
+
+
         <section class="col-md-9 col-sm-12 article-wrapper">
             <p>
                 <a asp-controller="Topic" asp-action="Create" class="btn btn-default">Create New Topic</a>
@@ -29,6 +51,11 @@
                                     <span class="user-name">Created Date: @topic.CreateDate.ToString("HH:mm dd/MMM/yyyy")</span>
                                 </span>
                             </span>
+                            <span class="user-wrap">
+                                <span class="cell">
+                                    Category: <a asp-controller="Category" asp-action="Details" asp-route-id="@topic.CategoryId">@topic.Category.Name</a>
+                                </span>
+                            </span>
                         </p>
                     </div>
                     <div class="meta-info">
@@ -39,12 +66,12 @@
                                     <span class="cell replay-date">@topic.LastUpdatedDate.ToString("HH:mm dd/MMM/yyyy")</span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6 stats-holder">
-                            <span class="item-wrap">
+                            <div class="col-md-6 stats-holder">
+                                <span class="item-wrap">
                                     <span class="cell">Comments: </span>
-                                    <span class="cell">@topic.NumberCommnts</span>                                
-                            </span>
+                                    <span class="cell">@topic.NumberCommnts</span>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -52,4 +79,3 @@
         </section>
     </div>
 </div>
-

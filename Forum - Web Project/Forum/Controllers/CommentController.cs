@@ -81,5 +81,114 @@ namespace Forum.Controllers
 
             return View(comment);
         }
+
+        [HttpGet]
+        [Route("/Topic/Details/{TopicId}/Comment/Edit/{id}")]
+        public IActionResult Edit(int? topicId, int? id)
+        {
+            if (id == null)
+            {
+                return RedirectPermanent($"/Topic/Details/{topicId}");
+            }
+
+            Comment comment = context
+                              .Comments
+                              .Include(c => c.Author)
+                              .Include(c => c.Topic)
+                              .ThenInclude(t => t.Author)
+                              .SingleOrDefault(c => c.CommentId == id);
+
+            if (comment == null)
+            {
+                return RedirectPermanent($"/Topic/Details/{topicId}");
+            }
+
+            if (!comment.IsAuthor(User.Identity.Name))
+            {
+                return Forbid();
+            }
+
+            return View(comment);
+        }
+
+        [Authorize]
+        [HttpPost]
+        [Route("/Topic/Details/{TopicId}/Comment/Edit/{id}")]
+        public IActionResult Edit(Comment comment)
+        {
+            if (ModelState.IsValid)
+            {
+                var comentFromDb = context
+                                   .Comments
+                                   .Include(c => c.Author)
+                                   .SingleOrDefault(c => c.CommentId == comment.CommentId);
+
+                if (comentFromDb == null)
+                {
+                    return RedirectPermanent($"/Topic/Details/{comment.TopicId}");
+                }
+
+                comentFromDb.Description = comment.Description;
+                comentFromDb.LastUpdatedDate = DateTime.Now;
+
+                Topic topic = context.Topics.Find(comment.TopicId);
+
+                context.SaveChanges();
+
+                return RedirectPermanent($"/Topic/Details/{comment.TopicId}");
+            }
+
+            return View(comment);
+        }
+
+        [HttpGet]
+        [Route("/Topic/Details/{TopicId}/Comment/Delete/{id}")]
+        public IActionResult Delete(int? topicId, int? id)
+        {
+            if (id == null)
+            {
+                return RedirectPermanent($"/Topic/Details/{topicId}");
+            }
+
+            Comment comment = context
+                              .Comments
+                              .Include(c => c.Author)
+                              .Include(c => c.Topic)
+                              .ThenInclude(t => t.Author)
+                              .SingleOrDefault(c => c.CommentId == id);
+
+            if (comment == null)
+            {
+                return RedirectPermanent($"/Topic/Details/{topicId}");
+            }
+
+            if (!comment.IsAuthor(User.Identity.Name) || !comment.Topic.IsAuthor(User.Identity.Name))
+            {
+                return Forbid();
+            }
+
+            return View(comment);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Route("/Topic/Details/{TopicId}/Comment/Delete/{id}")]
+        public IActionResult Delete(int id)
+        {
+            var comment = context
+                          .Comments
+                          .Find(id);
+
+            if (comment != null)
+            {
+                Topic topic = context.Topics.Find(comment.TopicId);
+                topic.LastUpdatedDate = DateTime.Now;
+
+                context.Comments.Remove(comment);
+                context.SaveChanges();
+            }
+
+            return RedirectPermanent($"/Topic/Details/{comment.TopicId}");
+        }
     }
 }

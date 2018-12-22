@@ -23,12 +23,16 @@ namespace Forum.Controllers
         [HttpGet]
         public IActionResult Create()
         {
+            var categoryNames = context.Categoties.Select(c => c.Name).ToList();
+
+            ViewData["CategoryNames"] = categoryNames;
+
             return View();
         }
 
         [Authorize]
         [HttpPost]
-        public IActionResult Create(Topic topic)
+        public IActionResult Create(string categoryName, Topic topic)
         {
             if (ModelState.IsValid)
             {
@@ -39,11 +43,21 @@ namespace Forum.Controllers
                                  .First()
                                  .Id;
 
+                if (!context.Categoties.Any(c => c.Name == categoryName))
+                {
+                    return View(topic);
+                }
+
+                topic.CategoryId = context.Categoties.SingleOrDefault(c => c.Name == categoryName).Id;
+
                 context.Topics.Add(topic);
                 context.SaveChanges();
+
+                return RedirectToAction("Index", "Home");
             }
 
-            return RedirectToAction("Index", "Home");
+            return View(topic);
+
         }
 
         public IActionResult Details(int? id)
@@ -55,6 +69,7 @@ namespace Forum.Controllers
 
             Topic topic = context.Topics
                           .Include(t => t.Author)
+                          .Include(t => t.Category)
                           .Include(t => t.Comments)
                           .ThenInclude(c => c.Author)
                           .Where(t => t.Id == id)
@@ -84,6 +99,11 @@ namespace Forum.Controllers
             if (topic == null)
             {
                 return RedirectToAction("Index", "Home");
+            }
+
+            if (!topic.IsAuthor(User.Identity.Name))
+            {
+                return Forbid();
             }
 
             return View(topic);
@@ -119,6 +139,7 @@ namespace Forum.Controllers
 
             Topic topic = context.Topics
                 .Include(t => t.Author)
+                .Include(t => t.Category)
                 .SingleOrDefault(t => t.Id == id);
 
             if (topic == null)
@@ -126,12 +147,21 @@ namespace Forum.Controllers
                 return RedirectToAction("Index", "Home");
             }
 
+            if (!topic.IsAuthor(User.Identity.Name))
+            {
+                return Forbid();
+            }
+
+            var categoryNames = context.Categoties.Select(c => c.Name).ToList();
+
+            ViewData["CategoryNames"] = categoryNames;
+
             return View(topic);
         }
 
         [Authorize]
         [HttpPost]
-        public IActionResult Edit(Topic topic)
+        public IActionResult Edit(string categoryName, Topic topic)
         {
             if (ModelState.IsValid)
             {
@@ -146,6 +176,7 @@ namespace Forum.Controllers
 
                 topicToEdit.Title = topic.Title;
                 topicToEdit.Description = topic.Description;
+                topicToEdit.CategoryId = context.Categoties.SingleOrDefault(c => c.Name == categoryName).Id;
                 topicToEdit.LastUpdatedDate = DateTime.Now;
 
                 context.SaveChanges();

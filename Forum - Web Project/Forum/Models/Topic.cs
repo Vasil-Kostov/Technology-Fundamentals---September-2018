@@ -9,12 +9,21 @@ namespace Forum.Models
 {
     public class Topic
     {
+        public bool IsAuthor(string id)
+        {
+            return this.Author.UserName.Equals(id);
+        }
+
         [Key]
         public int Id { get; set; }
 
         [Required]
         [StringLength(50)]
         public string Title { get; set; }
+
+        [ForeignKey("Category")]
+        public int CategoryId { get; set; }
+        public Category Category { get; set; }
 
         [Required]
         public string Description { get; set; }
